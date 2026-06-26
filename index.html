@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HalfLight — Remember your dreams. Learn to wake inside them.</title>
+  <meta name="description" content="HalfLight is an AI-assisted dream journal and lucid-dreaming guide for iOS. Capture dreams the moment you wake, get instant interpretations and theme tags, and follow a guided path to lucidity." />
+  <meta name="theme-color" content="#100E22" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="HalfLight — your dreams, remembered" />
+  <meta property="og:description" content="An AI-assisted dream journal and lucid-dreaming companion for iOS." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/logo.jpg" />
+
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="sky" aria-hidden="true"></div>
+  <canvas class="stars" aria-hidden="true"></canvas>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav" id="nav">
+    <div class="wrap nav-inner">
+      <a href="#top" class="brand">
+        <img src="assets/logo.jpg" alt="HalfLight logo" />
+        <span>HalfLight</span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a class="lnk" href="#features">Features</a>
+        <a class="lnk" href="#ai">AI</a>
+        <a class="lnk" href="#lucid">Lucid path</a>
+        <a class="lnk" href="#how">How it works</a>
+        <a class="lnk" href="#pricing">Pricing</a>
+        <a class="btn btn-primary" href="#download">Download</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">AI dream journal · lucid dreaming</span>
+          <h1>Remember your dreams.<br>Learn to wake <span class="it">inside</span> them.</h1>
+          <p class="hero-sub">HalfLight catches the dream before it slips away — then helps you understand it, find its patterns, and slowly teach your mind to become aware while you sleep.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#download">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 1.5c.1 1-.3 2-.9 2.7-.6.8-1.6 1.4-2.6 1.3-.1-1 .4-2 .9-2.6.7-.8 1.8-1.4 2.6-1.4ZM20 17.4c-.5 1.2-.8 1.7-1.5 2.7-1 1.5-2.3 3.3-4 3.3-1.5 0-1.9-1-3.9-1-2 0-2.5 1-4 1-1.6 0-2.9-1.6-3.9-3.1C.3 18 .1 14 1.7 11.8c1-1.5 2.6-2.4 4.1-2.4 1.6 0 2.6 1 3.9 1 1.3 0 2.1-1 3.9-1 1.4 0 2.8.7 3.8 2-3.3 1.8-2.8 6.5.6 8Z"/></svg>
+              Download for iOS
+            </a>
+            <a class="btn btn-ghost" href="#features">See the features</a>
+          </div>
+          <div class="hero-meta">
+            <span><b>SwiftUI</b> · built for iPhone</span>
+            <span><b>Private</b> · your keys stay server-side</span>
+            <span><b>Offline-first</b> · syncs when signed in</span>
+          </div>
+        </div>
+
+        <div class="phone-wrap">
+          <div class="phone">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <span class="ps-eyebrow">Wednesday · 6:42 AM</span>
+              <div class="ps-greet">Good morning,<br><i>dreamer</i></div>
+
+              <div class="ps-card">
+                <span class="lbl">Latest dream</span>
+                <div class="ttl">The glass staircase</div>
+                <p class="ex">I climbed a staircase made of light, and each step rang like a bell as the city dissolved below…</p>
+                <div class="ps-tags">
+                  <span class="ps-tag">flight</span>
+                  <span class="ps-tag">transformation</span>
+                  <span class="ps-tag">water</span>
+                </div>
+              </div>
+
+              <div class="ps-row">
+                <div class="ps-card"><div class="num">12</div><div class="cap">day streak</div></div>
+                <div class="ps-card"><div class="num">Lv 7</div><div class="cap">Lucid Adept</div></div>
+              </div>
+
+              <div class="ps-cta">+ Capture a dream</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== VALUE STRIP ===================== -->
+    <div class="strip">
+      <div class="wrap strip-inner">
+        <span class="strip-item"><span class="dot"></span>Dream journal</span>
+        <span class="strip-item"><span class="dot"></span>AI interpretation</span>
+        <span class="strip-item"><span class="dot"></span>Auto-tagging</span>
+        <span class="strip-item"><span class="dot"></span>Voice dictation</span>
+        <span class="strip-item"><span class="dot"></span>Lucid lessons</span>
+        <span class="strip-item"><span class="dot"></span>Streaks &amp; XP</span>
+        <span class="strip-item"><span class="dot"></span>Cloud sync</span>
+      </div>
+    </div>
+
+    <!-- ===================== FEATURES GRID ===================== -->
+    <section class="pad" id="features">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">What's inside</span>
+          <h2>Everything you need to hold onto the night</h2>
+          <p>A complete companion for the in-between hours — from the half-asleep capture to the long arc of becoming a lucid dreamer.</p>
+        </div>
+
+        <div class="feat-grid">
+          <article class="card reveal">
+            <div class="ic">📓</div>
+            <h3>Dream journal</h3>
+            <p>Record each dream with a title, free-text entry, mood, and tags. Designed to be fast at 3 AM, with a dark, low-glare interface.</p>
+          </article>
+          <article class="card reveal">
+            <div class="ic">✨</div>
+            <h3>AI interpretation</h3>
+            <p>Tap “Analyze with AI” for a thoughtful category and a short, grounded interpretation of what you just lived through.</p>
+          </article>
+          <article class="card reveal">
+            <div class="ic">🏷️</div>
+            <h3>Auto-tagging</h3>
+            <p>Let HalfLight surface the recurring symbols and themes in your dreams, then watch your personal dream-language emerge.</p>
+          </article>
+          <article class="card reveal">
+            <div class="ic">🎙️</div>
+            <h3>Voice dictation</h3>
+            <p>Too groggy to type? Speak the dream aloud and on-device speech-to-text writes it down before it fades.</p>
+          </article>
+          <article class="card reveal">
+            <div class="ic">🌙</div>
+            <h3>Lucid path</h3>
+            <p>A guided, step-by-step lesson map covering reality checks and the MILD, WBTB &amp; WILD induction methods.</p>
+          </article>
+          <article class="card reveal">
+            <div class="ic">📈</div>
+            <h3>Progress &amp; streaks</h3>
+            <p>XP, levels, ranks, weekly quests, journaling streaks, achievements, and a per-year activity grid keep the habit alive.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== AI DEEP-DIVE ===================== -->
+    <section class="pad" id="ai">
+      <div class="wrap">
+        <div class="frow">
+          <div class="frow-copy reveal">
+            <span class="eyebrow">AI assists</span>
+            <h3>Understand the dream, not just record it</h3>
+            <p>Every entry can be read back to you with the help of Claude. Three taps, three different lenses on the same dream — all running through a secure backend so the model never sees more than it needs.</p>
+            <ul class="flist">
+              <li><b>Analyze with AI</b> — a category plus a short, careful interpretation.</li>
+              <li><b>Auto-tag</b> — theme and symbol tags pulled straight from your words.</li>
+              <li><b>Generate title</b> — a fitting name for the dream in one tap.</li>
+              <li><b>Private by design</b> — API keys stay server-side; AI runs only when you're signed in.</li>
+            </ul>
+          </div>
+          <div class="frow-media reveal">
+            <div class="mock">
+              <span class="ai-chip">✦ Analyzed with AI</span>
+              <h4>The glass staircase</h4>
+              <div class="ai-line w-90"></div>
+              <div class="ai-line w-75"></div>
+              <div class="ai-line w-90"></div>
+              <div class="ai-line w-60"></div>
+              <div class="ai-tags">
+                <span>ascension</span><span>clarity</span><span>letting go</span><span>water</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== LUCID PATH ===================== -->
+    <section class="pad" id="lucid">
+      <div class="wrap">
+        <div class="frow flip">
+          <div class="frow-copy reveal">
+            <span class="eyebrow">Lucid path</span>
+            <h3>A calm, guided road to lucidity</h3>
+            <p>Lucid dreaming is a skill, not luck — and skills grow with reps. HalfLight breaks it into short, beginner-friendly lessons you unlock one by one, each with a hook, a quick lesson, a check, and a do-it-tonight challenge.</p>
+            <ul class="flist">
+              <li><b>Foundations</b> — the awareness habits every method relies on.</li>
+              <li><b>Reality checks &amp; recall</b> — train your mind to question waking life.</li>
+              <li><b>MILD · WBTB · WILD</b> — the proven induction techniques, demystified.</li>
+              <li><b>Grounded &amp; responsible</b> — calm tone, never overpromising.</li>
+            </ul>
+          </div>
+          <div class="frow-media reveal">
+            <div class="mock">
+              <span class="mock-eyebrow">Your lesson path</span>
+              <h4>Foundations</h4>
+              <div class="path">
+                <div class="path-node">
+                  <div class="path-dot done">✓</div>
+                  <div><div class="pn-t">What is lucid dreaming?</div><div class="pn-s">Complete</div></div>
+                </div>
+                <div class="path-line"></div>
+                <div class="path-node">
+                  <div class="path-dot done">✓</div>
+                  <div><div class="pn-t">The science behind it</div><div class="pn-s">Complete</div></div>
+                </div>
+                <div class="path-line"></div>
+                <div class="path-node">
+                  <div class="path-dot now">★</div>
+                  <div><div class="pn-t">Reality checks</div><div class="pn-s">In progress</div></div>
+                </div>
+                <div class="path-line"></div>
+                <div class="path-node">
+                  <div class="path-dot lock">🔒</div>
+                  <div><div class="pn-t">The MILD method</div><div class="pn-s">Locked</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROGRESS ===================== -->
+    <section class="pad" id="progress">
+      <div class="wrap">
+        <div class="frow">
+          <div class="frow-copy reveal">
+            <span class="eyebrow">Progress</span>
+            <h3>Build the habit, see the patterns</h3>
+            <p>Remembering dreams is itself a trainable skill — so HalfLight rewards you for showing up. Earn XP, climb named ranks, keep your streak alive, and watch a year of dreaming fill in square by square.</p>
+            <ul class="flist">
+              <li><b>XP, levels &amp; ranks</b> — turn the nightly habit into momentum.</li>
+              <li><b>Weekly quests &amp; achievements</b> — small goals, real unlocks.</li>
+              <li><b>Streaks</b> — gentle pressure to capture every morning.</li>
+              <li><b>Theme insights</b> — your most-repeated symbols, drillable to the dreams behind them.</li>
+            </ul>
+          </div>
+          <div class="frow-media reveal">
+            <div class="mock">
+              <span class="mock-eyebrow">This year</span>
+              <h4>148 dreams remembered</h4>
+              <div class="prog-grid">
+                <div class="prog-cell"><div class="n">12</div><div class="c">Day streak</div></div>
+                <div class="prog-cell"><div class="n">Lv 7</div><div class="c">Lucid Adept</div></div>
+                <div class="prog-cell"><div class="n">31</div><div class="c">Lucid dreams</div></div>
+                <div class="prog-cell"><div class="n">9</div><div class="c">Achievements</div></div>
+              </div>
+              <div class="heat" id="heat"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== HOW IT WORKS ===================== -->
+    <section class="pad" id="how">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">How it works</span>
+          <h2>From half-asleep to fully understood</h2>
+          <p>Three small steps, repeated each morning, that compound into real recall — and eventually, lucidity.</p>
+        </div>
+        <div class="steps">
+          <div class="step reveal">
+            <div class="num">01</div>
+            <h3>Capture</h3>
+            <p>The moment you wake, open HalfLight and dump the dream — type it or speak it. The faster you log, the more you keep.</p>
+          </div>
+          <div class="step reveal">
+            <div class="num">02</div>
+            <h3>Understand</h3>
+            <p>Let the AI title, tag, and interpret it. Your dream becomes searchable, structured, and a little less mysterious.</p>
+          </div>
+          <div class="step reveal">
+            <div class="num">03</div>
+            <h3>Practice</h3>
+            <p>Work through the lucid lessons and reality-check challenges. Night by night, your awareness in dreams grows.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PRICING ===================== -->
+    <section class="pad" id="pricing">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Pricing</span>
+          <h2>Free to journal. Pro to understand.</h2>
+          <p>The dream journal, lucid path, streaks, and progress are all free. HalfLight Pro unlocks the AI features for the dreamers who want to go deeper.</p>
+        </div>
+        <div class="price-grid">
+          <div class="price reveal">
+            <span class="plan">Free</span>
+            <div class="amt">$0</div>
+            <p class="desc">Everything you need to start remembering your dreams.</p>
+            <ul>
+              <li>Unlimited dream journal</li>
+              <li>Moods, tags &amp; voice dictation</li>
+              <li>Full lucid-dreaming lesson path</li>
+              <li>Streaks, XP, quests &amp; achievements</li>
+              <li>Cloud sync when signed in</li>
+            </ul>
+            <a class="btn btn-ghost" href="#download">Get started</a>
+          </div>
+
+          <div class="price feature reveal">
+            <span class="badge">1 week free</span>
+            <span class="plan">Pro · Yearly</span>
+            <div class="amt">$49.99<span> / year</span></div>
+            <p class="desc">Best value — a free week to try it, then the full AI toolkit all year.</p>
+            <ul>
+              <li>Everything in Free</li>
+              <li><b>Analyze with AI</b> interpretations</li>
+              <li><b>Auto-tag</b> themes &amp; symbols</li>
+              <li><b>AI-generated titles</b></li>
+              <li>Priority on new AI features</li>
+            </ul>
+            <a class="btn btn-primary" href="#download">Start free trial</a>
+          </div>
+
+          <div class="price reveal">
+            <span class="plan">Pro · Monthly</span>
+            <div class="amt">$9.99<span> / month</span></div>
+            <p class="desc">The same AI features, month to month. Cancel anytime.</p>
+            <ul>
+              <li>Everything in Free</li>
+              <li>Analyze with AI interpretations</li>
+              <li>Auto-tag themes &amp; symbols</li>
+              <li>AI-generated titles</li>
+              <li>Cancel anytime</li>
+            </ul>
+            <a class="btn btn-ghost" href="#download">Choose monthly</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FAQ ===================== -->
+    <section class="pad" id="faq">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Questions</span>
+          <h2>Good to know</h2>
+        </div>
+        <div class="faq">
+          <details class="qa reveal"><summary>Is lucid dreaming actually real?<span class="plus">+</span></summary>
+            <div class="ans">Yes. It's a studied state first verified in a sleep lab in 1975, where a dreaming volunteer signaled awareness using pre-agreed eye movements while still in REM. About half of people have had a lucid dream at least once by accident — HalfLight just helps you do it on purpose.</div>
+          </details>
+          <details class="qa reveal"><summary>Do I need the AI features to get value?<span class="plus">+</span></summary>
+            <div class="ans">Not at all. The journal, lucid lessons, streaks, and progress tracking are completely free. The AI interpretation, auto-tagging, and title generation are the Pro additions for dreamers who want extra insight.</div>
+          </details>
+          <details class="qa reveal"><summary>How private are my dreams?<span class="plus">+</span></summary>
+            <div class="ans">Your dreams live on your device first and sync to a private, row-level-secured space only when you sign in. AI requests run through a secure backend — the API keys never ship in the app, and AI only runs when you ask it to.</div>
+          </details>
+          <details class="qa reveal"><summary>Can I use HalfLight without an account?<span class="plus">+</span></summary>
+            <div class="ans">Yes — you can journal locally right away. Signing in with email or Apple adds cloud backup and sync across devices. You can also permanently delete your account and data from inside the app at any time.</div>
+          </details>
+          <details class="qa reveal"><summary>What platforms are supported?<span class="plus">+</span></summary>
+            <div class="ans">HalfLight is a native iOS app built with SwiftUI, including a home-screen widget. iPhone is the primary experience today.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CTA ===================== -->
+    <section class="pad cta-band" id="download">
+      <div class="wrap">
+        <div class="cta-inner reveal">
+          <h2>The dream is already <span class="it">fading</span>.</h2>
+          <p>Start your journal tonight. Tomorrow morning, you'll be glad you did.</p>
+          <a class="btn btn-primary" href="#" style="font-size:16px; padding:16px 30px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 1.5c.1 1-.3 2-.9 2.7-.6.8-1.6 1.4-2.6 1.3-.1-1 .4-2 .9-2.6.7-.8 1.8-1.4 2.6-1.4ZM20 17.4c-.5 1.2-.8 1.7-1.5 2.7-1 1.5-2.3 3.3-4 3.3-1.5 0-1.9-1-3.9-1-2 0-2.5 1-4 1-1.6 0-2.9-1.6-3.9-3.1C.3 18 .1 14 1.7 11.8c1-1.5 2.6-2.4 4.1-2.4 1.6 0 2.6 1 3.9 1 1.3 0 2.1-1 3.9-1 1.4 0 2.8.7 3.8 2-3.3 1.8-2.8 6.5.6 8Z"/></svg>
+            Download on the App Store
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="foot">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <a href="#top" class="brand"><img src="assets/logo.jpg" alt="HalfLight logo" /><span>HalfLight</span></a>
+          <p class="foot-tag">An AI-assisted dream journal and lucid-dreaming companion for iOS. Hold onto the night.</p>
+        </div>
+        <div class="foot-cols">
+          <div class="foot-col">
+            <h4>Product</h4>
+            <a href="#features">Features</a>
+            <a href="#ai">AI assists</a>
+            <a href="#lucid">Lucid path</a>
+            <a href="#pricing">Pricing</a>
+          </div>
+          <div class="foot-col">
+            <h4>Support</h4>
+            <a href="#faq">FAQ</a>
+            <a href="#download">Download</a>
+            <a href="mailto:support@thelanternhours.com">Contact</a>
+          </div>
+          <div class="foot-col">
+            <h4>Legal</h4>
+            <a href="privacy.html">Privacy</a>
+            <a href="privacy.html#contact">Contact</a>
+          </div>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span>© <span id="year"></span> HalfLight. All rights reserved.</span>
+        <span>Made for the in-between hours.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
