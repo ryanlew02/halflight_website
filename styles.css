@@ -138,6 +138,9 @@ section { position: relative; }
   white-space: nowrap;
 }
 .btn:active { transform: scale(0.97); }
+.btn:disabled, .btn.is-disabled {
+  cursor: not-allowed; opacity: 0.55; transform: none; pointer-events: none;
+}
 .btn-primary { background: var(--primary); color: var(--on-primary); }
 .btn-primary:hover { opacity: 0.92; }
 .btn-ghost {
